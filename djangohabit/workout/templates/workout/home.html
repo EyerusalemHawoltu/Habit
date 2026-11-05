@@ -1,0 +1,15 @@
+{% extends "workout/base.html" %}
+{% block content %}
+    {% for workout in workouts %}
+    <article class="media content-section">
+        <div class="media-body">
+          <div class="article-metadata">
+            <a class="mr-2" href="#">{{ workout.muscle }}</a>
+            <small class="text-muted">{{ workout.machine }}</small>
+          </div>
+          <h2><a class="article-title" href="#">{{ workout.numberofset }}</a></h2>
+          <p class="article-content">{{ workout.numberofrep }}</p>
+        </div>
+      </article>
+    {% endfor %}
+{% endblock content %}
